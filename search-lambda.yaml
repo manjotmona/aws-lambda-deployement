@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  searchlambda:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.7
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 3
+      Role: 'arn:aws:iam::946956355776:role/service-role/search-lambda-role-erde7yn0'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /search
+            Method: GET
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-eaa010cb
+        SubnetIds:
+          - subnet-23e21f7c
