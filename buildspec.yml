@@ -1,0 +1,9 @@
+version: 0.2  
+phases:  
+  install:
+    commands:
+      - aws cloudformation package --template-file search-lambda.yaml --s3-bucket backend-deployement-pipeline-bucket --output-template-file quotes.yaml
+artifacts:  
+  type: zip
+  files:
+    - quotes.yaml
