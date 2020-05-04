@@ -26,7 +26,7 @@ def lambda_handler(event, context):
         # version='$LATEST'
     )
     
-    print('**response2 Deplpyed without VPC**')
+    print('**response2 Deplpyed without VPC1112244**')
     print(response)
     '''
     responseText = response['slots']
