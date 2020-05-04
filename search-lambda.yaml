@@ -18,3 +18,8 @@ Resources:
           Properties:
             Path: /search
             Method: GET
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-eaa010cb
+        SubnetIds:
+          - subnet-23e21f7c
