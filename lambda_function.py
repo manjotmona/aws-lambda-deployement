@@ -26,7 +26,7 @@ def lambda_handler(event, context):
         # version='$LATEST'
     )
     
-    print('**response**')
+    print('**response1**')
     print(response)
     '''
     responseText = response['slots']
